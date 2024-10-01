@@ -19,16 +19,16 @@ int	ft_isprint(int c)
 	return (0);
 }
 
-int	main(void)
-{
-	int a;
-	int b;
-
-	a = 128;
-	b = 'a';
-
-	printf("%d\n", ft_isprint(a));
-	printf("%d", ft_isprint(b));
-
-	return (0);
-}
+// int	main(void)
+//{
+//	int a;
+//	int b;
+//
+//	a = 128;
+//	b = 'a';
+//
+//	printf("%d\n", ft_isprint(a));
+//	printf("%d", ft_isprint(b));
+//
+//	return (0);
+//}

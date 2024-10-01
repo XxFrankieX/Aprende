@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 #
-#include <stdio.h>
-
+#include "libft.h"
+//Esta función determina la longitud de serie excluyendo el carácter nulo al final.
 size_t	ft_strlen(const char *s)
 {
-	size_t	i;
+	size_t	i; //Determina la cantidad de bytes que va  tomar un puntero.
 
 	i = 0;
-	while (s[i])
+	while (s[i]) //Mientras se de el string entero
 		i++;
-	return (i);
+	return (i); //Te va a devolver la cantidad de bytes que hay en el string.
 }
 
 int	main(void)

@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-//Esta función comprueba si el carácter es un número
+#include "libft.h"
+
+// Esta función comprueba si el carácter es un número
 int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
@@ -19,12 +20,12 @@ int	ft_isdigit(int c)
 	return (0);
 }
 /*
-int	main()
+int	main(void)
 {
 	int	c;
+
 	c = '4';
 	printf("%d", ft_isdigit(c));
-
 	return (0);
 }
 */

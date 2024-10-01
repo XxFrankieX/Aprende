@@ -11,14 +11,13 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 // Esta función  comprueba si el carácter es alfabético o un número
 int	ft_isalnum(int c)
 {
-	if ((c >= 48 && c <= 57) || (c >= 97 && c <= 122) || (c >= 65 && c <= 90))
-		return (1);
-	return (0);
+	if ((c >= 48 && c <= 57) || (c >= 97 && c <= 122) || (c >= 65 && c <= 90)) //Se señalan los carácteres alfabéticos y numéricos en la tablas ascii.
+		return (1); //Te devuelve verdadero(1) si cumple la condición.
+	return (0); //Te devuelve falso(0) si no la cumple.
 }
 
 // int main ()

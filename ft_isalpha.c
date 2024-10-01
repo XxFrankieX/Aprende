@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 // Esta función comprueba si el carácter es alfabético
 int	ft_isalpha(int c)

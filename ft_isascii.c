@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 // Esta función comprueba si es un carácter de la tablas ASCII
 int	ft_isacii(int c)
