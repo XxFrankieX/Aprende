@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mconde-s <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: mconde-s <mconde-s>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 17:34:13 by mconde-s          #+#    #+#              #
-#    Updated: 2024/09/27 17:34:16 by mconde-s         ###   ########.fr        #
+#    Updated: 2024/10/02 16:05:23 by mconde-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@
 #ctrl + d + d -> selecciona varias palabras y se las puede modificar.
 #ctrl + shift + cualquier flecha -> selecciona líneas.
 #shift + flechas -> selecciona letras. ctrl k + c o + u -> comentar
+#ctrl + l -> Se borran las cosas de la terminal.
+#ctrl + w -> Se borra palabra por palabra
 
 NAME = libft.a #El resultado que quiero llegar 
 

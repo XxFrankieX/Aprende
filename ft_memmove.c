@@ -44,13 +44,12 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	return(dest);
 
 }
-#include <string.h>	
-int main()
-{
-
-	char src[] = "TodoMal";
-	char dest[] = "NoPasaNada";
-	ft_memmove(dest, src, 12);
-	printf("%s\n", dest);
-	return(0);
-}
+// #include <string.h>	
+// int main()
+// {
+// 	char src[] = "TodoMal";
+// 	char dest[] = "NoPasaNada";
+// 	ft_memmove(dest, src, 12);
+// 	printf("%s\n", dest);
+// 	return(0);
+// }

@@ -22,10 +22,10 @@ size_t	ft_strlen(const char *s)
 	return (i); //Te va a devolver la cantidad de bytes que hay en el string.
 }
 
-int	main(void)
-{
-	char a[25] = "buenastardeshola";
-	printf("%zu\n", ft_strlen(a));
-	printf("%lu\n", sizeof(size_t));
-	return (0);
-}
+// int	main(void)
+// {
+// 	char a[25] = "buenastardeshola";
+// 	printf("%zu\n", ft_strlen(a));
+// 	printf("%lu\n", sizeof(size_t));
+// 	return (0);
+// }

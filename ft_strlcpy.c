@@ -26,27 +26,22 @@
 
 size_t ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t src2;
-	size_t dst2;
 	size_t i;
 
-	src2 = (size_t)src;
-	dst2 = (size_t)dst;
 	i = 0;
 
-	while ((i < size) && (size != '\0'))
+	while (i < size)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	return(dst2);
+	return(i);
 }
-int main()
-{
-	char dest[] = "kutkuygk";
-	char src[] = "quetalop";
-
-	ft_strlcpy(dest, src, 9);
-	printf("%s", dest);
-	return(0);
-}
+// int main()
+// {
+// 	char dst[] = "ku";
+// 	char src[] = "H";
+// 	ft_strlcpy(dst, src, 10);
+// 	printf("%lu", ft_strlen(dst));
+// 	return(0);
+// }
