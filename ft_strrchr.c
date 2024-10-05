@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 13:08:57 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/10/05 16:15:09 by mconde-s         ###   ########.fr       */
+/*   Created: 2024/10/05 17:28:19 by mconde-s          #+#    #+#             */
+/*   Updated: 2024/10/05 18:40:04 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Esta función comprueba si es un carácter de la tablas ASCII
-int	ft_isacii(int c)
+char *ft_strrchr(const char *s, int c)
 {
-	if (c >= 0 && c <= 255)
-		return (1);
-	return (0);
+	while(*s++)
+	while (*s > 0)
+	{
+		if (*(s - 1) != (char)c)
+		s--;
+	}
+	return((char *)s);
 }
 
-int	main(void)
+int main()
 {
-	int a;
-	int b;
+	char a[] = "HelloThere1232";
 
-	a = 256;
-	b = 255;
-
-	printf("%d\n", ft_isacii(a));
-	printf("%d", ft_isacii(b));
-
-	return (0);
+	printf("%s", ft_strrchr(a, 'e'));
+	return(0);
 }

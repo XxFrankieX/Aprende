@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mconde-s <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 19:29:23 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/09/30 19:29:27 by mconde-s         ###   ########.fr       */
+/*   Updated: 2024/10/03 18:26:59 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 		while (i > 0) //Mientras i sea mayor que 0
 		{
 			dest2[i - 1] = src2[i - 1]; //Para poder llegar al 0 se debe restar uno porque la condición nunca va a llegar ser 0 porque i siempre va a ser positivo.
-			i--; //ietera hacia atrás.
+			i--; //itera hacia atrás.
 		}
 	}
 	return(dest);

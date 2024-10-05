@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mconde-s <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 13:29:34 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/09/30 13:29:35 by mconde-s         ###   ########.fr       */
+/*   Updated: 2024/10/03 16:57:16 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 //Esta función se puede utilizar para borrar el área de memoria dada con 0 bytes (\0)
 void ft_bzero(void *s, size_t n)
@@ -28,9 +29,9 @@ void ft_bzero(void *s, size_t n)
 
 int main()
 {
-	char o[15];
+	char o[] = "HelloThere";
 
-	ft_bzero(o, 25);
+	ft_bzero(o, 10);
 	printf("%s\n", o);
 	return(0);
 }

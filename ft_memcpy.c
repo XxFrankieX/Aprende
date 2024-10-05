@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mconde-s <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 16:33:39 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/09/30 16:33:40 by mconde-s         ###   ########.fr       */
+/*   Updated: 2024/10/03 17:31:03 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest); //Devuelve destino.
 }
-/*
+
 int	main(void)
 {
 	char src3[] = "holaQueTal";
@@ -39,5 +39,4 @@ int	main(void)
 	ft_memcpy(dest3,src3, 20);
 	printf("%s", dest3);
 	return(0);
-	}
-*/
+}
