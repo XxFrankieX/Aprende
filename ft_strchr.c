@@ -6,7 +6,7 @@
 /*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 19:54:30 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/10/05 17:59:40 by mconde-s         ###   ########.fr       */
+/*   Updated: 2024/10/06 16:09:47 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char *ft_strchr(const char *s, int c)
 int main()
 {
 	char a[] = "123443434helloThere";
-	printf("%s", ft_strchr(a, 'u'));
+	printf("%s", ft_strchr(a, 'h'));
 	return(0);
 }
 

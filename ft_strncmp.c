@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/05 17:28:19 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/10/06 17:03:02 by mconde-s         ###   ########.fr       */
+/*   Created: 2024/10/06 19:05:02 by mconde-s          #+#    #+#             */
+/*   Updated: 2024/10/06 20:46:36 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// char* int* long* (Todos los punteros miden 8 bytes)
-
-char *ft_strrchr(const char *s, int c)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while(*s) //Mientras no llegue al caracter nulo, sigue iterando
-		s++;
-	while (*s >= 0) //Mientras que el caracter sea mayor o igual a 0 (la primera posición)
-	{
-		if (*s == (char)c)
-			return((char *)s);
-		s--;
-	}
-	return(NULL);
-}
+	size_t i;
 
+	i = 0;
+	
+	while (n > i && s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+	{	
+		i++;
+	}
+	if (i < n)
+		return((unsigned char)s1[i] - (unsigned char)s2[i]);
+	return(0);
+}
 int main()
 {
-	char *a = ":1234:)HelloThere"; //[:, 1, 2, 3 ,4 ...]
-	
-	printf("%s", ft_strrchr(a, ':'));
+	char s1[] = "HelloThere";
+	char s2[] = "Hello";
+	printf("%d", ft_strncmp(s1, s2, 6));
 	return(0);
 }

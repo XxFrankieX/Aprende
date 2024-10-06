@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/05 17:28:19 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/10/06 17:03:02 by mconde-s         ###   ########.fr       */
+/*   Created: 2024/10/06 20:47:39 by mconde-s          #+#    #+#             */
+/*   Updated: 2024/10/06 20:58:07 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// char* int* long* (Todos los punteros miden 8 bytes)
-
-char *ft_strrchr(const char *s, int c)
+void *memchr(const void *s, int c, size_t n)
 {
-	while(*s) //Mientras no llegue al caracter nulo, sigue iterando
-		s++;
-	while (*s >= 0) //Mientras que el caracter sea mayor o igual a 0 (la primera posición)
-	{
-		if (*s == (char)c)
-			return((char *)s);
-		s--;
-	}
-	return(NULL);
-}
+	unsigned char *s1;
+	size_t i;
+	
+	s1 = (unsigned char *)s;
+	i = 0;
 
+	while (n > i && s1[i] && s1[i] != (char)c)
+		i++;
+	return(*s1);
+}
 int main()
 {
-	char *a = ":1234:)HelloThere"; //[:, 1, 2, 3 ,4 ...]
-	
-	printf("%s", ft_strrchr(a, ':'));
-	return(0);
+	char a[]
 }
