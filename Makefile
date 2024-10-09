@@ -6,7 +6,7 @@
 #    By: mconde-s <mconde-s>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 17:34:13 by mconde-s          #+#    #+#              #
-#    Updated: 2024/10/02 16:05:23 by mconde-s         ###   ########.fr        #
+#    Updated: 2024/10/09 16:37:37 by mconde-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,23 +15,37 @@
 #Ctrl + ` + shift -> te abre una nueva terminal y ctrl + d -> te la cierra
 #ctrl + d + d -> selecciona varias palabras y se las puede modificar.
 #ctrl + shift + cualquier flecha -> selecciona líneas.
-#shift + flechas -> selecciona letras. ctrl k + c o + u -> comentar
+#shift + flechas -> selecciona letras. ctrl k
+# + c o + u -> comentar
 #ctrl + l -> Se borran las cosas de la terminal.
 #ctrl + w -> Se borra palabra por palabra
 
 NAME = libft.a #El resultado que quiero llegar 
 
 #Señalo los archivos .c
-C_FILES =	ft_isalnum.c \
-			ft_isalpha.c \
+C_FILES =	ft_isalpha.c \
+			ft_memchr.c \
+			ft_strchr.c \
+			ft_strncmp.c \
+			ft_toupper.c \
+			ft_atoi.c \
 			ft_isascii.c \
+			ft_memcpy.c \
+			ft_strlcat.c \
+			ft_strnstr.c \
+			ft_bzero.c \
 			ft_isdigit.c \
+			ft_memmove.c \
+			ft_strlcpy.c \
+			ft_strrchr.c \
+			ft_isalnum.c \
 			ft_isprint.c \
 			ft_memset.c \
-			ft_strchr.c \
 			ft_strlen.c \
 			ft_tolower.c \
-			ft_toupper.c
+			ft_calloc.c \
+			ft_strdup.c
+			
 
 O_FILES = ${patsubst %.c, %.o, ${C_FILES}} # Reemplaza los ".c" por ".o" en todo el string ${C_FILES}. EL % es lo mismo que el * en *.a, que significa "cualquier número de carácteres junto con el .c al final"
 #patsubst es un comando que significa path substitute y los reemplaza según las normas dadas.
