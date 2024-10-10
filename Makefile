@@ -6,7 +6,7 @@
 #    By: mconde-s <mconde-s>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/27 17:34:13 by mconde-s          #+#    #+#              #
-#    Updated: 2024/10/09 16:37:37 by mconde-s         ###   ########.fr        #
+#    Updated: 2024/10/10 20:00:59 by mconde-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,10 +53,11 @@ O_FILES = ${patsubst %.c, %.o, ${C_FILES}} # Reemplaza los ".c" por ".o" en todo
 all: ${NAME} #Señala que all tiene que compilar NAME (variable)
 
 clean: #elimina todos los  .o
-	-rm $(O_FILES)
+	@echo "Cleaning..."
+	@ rm $(O_FILES)
 
 fclean: clean #elimina los .o y también elimina NAME para ejecutarlo las veces que quiera porque si no dice que no hay nada que cambiar.
-	-rm ${NAME}
+	@ rm ${NAME}
 re: fclean all
 ${NAME}: ${O_FILES} #Para conseguir Libft.a se necesitan los .o que están en la variable O_FILES. Cuando no es una target y se pone VARIABLE: VARIABLE2, estás diciendo cómo convertir la VARIABLE2 en la VARIABLE1.
 	ar -rsc ${NAME} $? 
