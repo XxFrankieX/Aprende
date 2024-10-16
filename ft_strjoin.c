@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 13:08:57 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/10/12 21:58:33 by mconde-s         ###   ########.fr       */
+/*   Created: 2024/10/11 19:02:55 by mconde-s          #+#    #+#             */
+/*   Updated: 2024/10/11 20:18:30 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Esta función comprueba si es un carácter de la tablas ASCII
-int	ft_isascii(int c)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	if (c >= 0 && c <= 127) //ASCII tiene 8 bit, solo llega hasta el 127
+	char *s3;
+	size_t lens1;
+	size_t lens2;
 	
-		return (1);
-	return (0);
+	if(!s1 || !s2)
+		return(NULL);
+	lens1 = ft_strlen(s1);
+	lens2 = ft_strlen(s2);
+	s3 = malloc(lens1 + lens2 + 1);
+	
+	if (!s3)
+		return(NULL);
+	ft_strlcpy(s3, s1, lens1 + 1);
+	ft_strlcat(s3,s2, lens1 + lens2 + 1);
+	return(s3);
+	
 }
-
-/* int	main(void)
+/* int main()
 {
-	int a;
-	int b;
-
-	a = 256;
-	b = 255;
-
-	printf("%d\n", ft_isacii(a));
-	printf("%d", ft_isacii(b));
-
-	return (0);
-} */
+	char s1[] = "";
+	char s2[] = "";
+	
+	printf("%s\n", ft_strjoin(s1, s2));
+	return(0);
+}	 */

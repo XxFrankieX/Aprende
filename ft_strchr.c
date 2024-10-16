@@ -6,7 +6,7 @@
 /*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 19:54:30 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/10/09 16:30:20 by mconde-s         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:08:40 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ char	*ft_strchr(const char *s, int c)
 	while (*s && *s != (char)c) // Deja de entrar cuando aparece un caracter.
 	{
 		s++;
-		if (*s == '\0') // PREGUNTA SI ES *S + 1 o así.
-			return (NULL);
 	}
+	if (*s == '\0' && c != 0) // PREGUNTA SI ES *S + 1 o así.
+			return (NULL);
 	return ((char *)s);
 }
 

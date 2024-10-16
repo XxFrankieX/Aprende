@@ -6,7 +6,7 @@
 /*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 20:40:39 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/10/09 16:31:26 by mconde-s         ###   ########.fr       */
+/*   Updated: 2024/10/11 12:37:47 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,17 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	while (i < size)
+	if (size == 0)
+		return(ft_strlen(src));
+		
+	while (i < (size - 1) && src[i] != '\0')
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	return (i);
+	dst[i] = '\0';
+	
+	return (ft_strlen(src));
 }
 // int main()
 // {

@@ -6,7 +6,7 @@
 /*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 15:54:36 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/10/10 20:01:56 by mconde-s         ###   ########.fr       */
+/*   Updated: 2024/10/14 18:49:00 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,11 @@ char	*ft_strdup(const char *s)
 	char	*cpy;
 	size_t	len;
 
-	len = ft_strlen(s);
-	cpy = malloc(len);
-	if (cpy == 0)
-		return (NULL);
-	ft_strlcpy(cpy, s, len);
-
+	len = ft_strlen(s) + 1; // 6
+	cpy = ft_calloc((len) , sizeof(char)); // 6
+	if(!cpy)
+		return(NULL);
+	ft_memcpy(cpy, s, len); // 6
 	return(cpy);
 }
 

@@ -1,0 +1,42 @@
+char **ft_split(char const *s, char c) {
+    size_t i = 0;
+    size_t count = 0;
+
+    // Contar las ocurrencias de c y substrings
+    while (s[i]) {
+        if (s[i] == c) {
+            count++;
+        }
+        i++;
+    }
+    count++; // Para la última palabra
+
+    // Asignar memoria para el array de substrings
+    char **result = malloc((count + 1) * sizeof(char *));
+    if (!result) return NULL; // Manejar error de memoria
+
+    size_t j = 0; // Contador para substrings
+    size_t start = 0;
+
+    // Extraer los substrings
+    for (i = 0; s[i]; i++) {
+        if (s[i] == c) {
+            if (i > start) {
+                result[j] = substr(s, start, i - start);
+                if (!result[j]) return NULL; // Manejar error de memoria
+                j++;
+            }
+            start = i + 1;
+        }
+    }
+
+    // Añadir el último substring si existe
+    if (i > start) {
+        result[j] = substr(s, start, i - start);
+        if (!result[j]) return NULL; // Manejar error de memoria
+        j++;
+    }
+
+    result[j] = NULL; // Terminar el array con NULL
+    return result;
+}

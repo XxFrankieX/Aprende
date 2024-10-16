@@ -6,7 +6,7 @@
 /*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 20:47:39 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/10/09 16:24:23 by mconde-s         ###   ########.fr       */
+/*   Updated: 2024/10/10 20:43:25 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-int	main(void)
+/* int	main(void)
 {
 	char a[] = "HelloThere";
 	char *b;
 	b = ft_memchr(a, 'e', 4);
 	printf("%c", (*b));
 	return (0);
-}
+} */

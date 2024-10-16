@@ -6,7 +6,7 @@
 /*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 19:29:23 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/10/09 16:27:53 by mconde-s         ###   ########.fr       */
+/*   Updated: 2024/10/14 18:14:42 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*src2;
 	unsigned char	*dest2;
 	size_t			i;
-
+	
+	if(!dest && !src)
+		return(dest);
 	src2 = (unsigned char *)src; // Casting
 	dest2 = (unsigned char *)dest;
 	if (dest2 < src2) //(el if solo se repite una vez,

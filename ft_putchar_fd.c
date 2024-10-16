@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 13:08:57 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/10/12 21:58:33 by mconde-s         ###   ########.fr       */
+/*   Created: 2024/10/12 17:36:08 by mconde-s          #+#    #+#             */
+/*   Updated: 2024/10/12 17:54:27 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <fcntl.h>
 
-// Esta función comprueba si es un carácter de la tablas ASCII
-int	ft_isascii(int c)
+void ft_putchar_fd(char c, int fd)
 {
-	if (c >= 0 && c <= 127) //ASCII tiene 8 bit, solo llega hasta el 127
-	
-		return (1);
-	return (0);
+	write(fd, &c, 1);	
 }
 
-/* int	main(void)
+/* int	main()
 {
-	int a;
-	int b;
+	int	fd;
+	int	fd2;
 
-	a = 256;
-	b = 255;
 
-	printf("%d\n", ft_isacii(a));
-	printf("%d", ft_isacii(b));
-
-	return (0);
-} */
+	fd = open("txt.txt", O_WRONLY);
+	fd2 = open("patata.txt", O_WRONLY);
+	printf("%d", fd);
+	printf("%d", fd2);
+	ft_putchar_fd('c', fd);
+}
+ */

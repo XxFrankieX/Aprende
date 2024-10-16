@@ -6,7 +6,7 @@
 /*   By: mconde-s <mconde-s>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 15:54:16 by mconde-s          #+#    #+#             */
-/*   Updated: 2024/10/09 19:22:03 by mconde-s         ###   ########.fr       */
+/*   Updated: 2024/10/16 16:24:27 by mconde-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return(a);
 	
 }
+/* int main()
+{
+	char *a;
+	a = ft_calloc(0, sizeof(char));
+	return(0);
+} */
